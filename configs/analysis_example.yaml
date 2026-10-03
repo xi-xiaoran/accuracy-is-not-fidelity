@@ -1,0 +1,48 @@
+# Input schemas only; this file contains no experimental observations.
+configuration_metrics_schema:
+  required_columns:
+    - target_id
+    - model_key
+    - method_key
+    - keep_ratio
+    - method_category
+    - dense_acc_pct
+    - compressed_acc_pct
+    - acc_delta_pct
+    - pred_flip_pct
+    - hidden_churn_pct
+    - damage_pct
+    - repair_pct
+    - wrong_to_wrong_pct
+    - prob_js_pct
+    - bar_ge1_flip_pct
+lm_eval_sample_schema:
+  required_fields:
+    - doc_id
+    - target
+    - arguments
+    - filtered_resps
+  optional_validation_fields:
+    - acc
+    - acc_norm
+mechanism_correlation_schema:
+  required_columns:
+    - metric_col
+    - target
+    - spearman
+  exact_metric_keys:
+    prompt_cosine_drift: mean_cos_dist
+    answer_path_mean_cosine_drift: mean_choice_cos
+  exact_target_keys:
+    prediction_flip: pred_flip_pct
+    hidden_churn: hidden_churn_pct
+effective_residual_correlation_schema:
+  required_columns:
+    - scope
+    - feature
+    - metric
+    - spearman
+bootstrap:
+  resampling_unit: checkpoint_configuration
+  confidence_level: 0.95
+  seed: 20260720

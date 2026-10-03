@@ -1,0 +1,29 @@
+# Schema-only example. Replace placeholders with artifacts you are authorized to use.
+checkpoint_repository: "neurips-ed2026-anon-checkpoints/submission-checkpoints"
+tasks:
+  - boolq
+  - arc_easy
+  - arc_challenge
+  - winogrande
+  - piqa
+  - hellaswag
+  - openbookqa
+lm_eval:
+  model_backend: hf
+  dtype: float16
+  batch_size: auto
+  num_fewshot: 0
+  device: cuda:0
+  trust_remote_code: true
+  log_samples: true
+manifest_csv_schema:
+  required_columns:
+    - target_id
+    - model_key
+    - method_key
+    - keep_tag
+    - output_dir
+  model_locator_columns_any_of:
+    - eval_model
+    - remote_prefix
+    - dense_model_hf

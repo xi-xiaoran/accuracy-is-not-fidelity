@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv*/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments and caches
+.conda*/
+.cache/
+hf/
+huggingface/
+models/
+checkpoints/
+
+# Generated project artifacts
+results/
+logs/
+outputs/
+generated/
+figures/
+tables/
+*.log
+*.out
+*.err
+
+# Large or derived data
+*.csv
+*.tsv
+*.json
+*.jsonl
+*.parquet
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.h5
+*.hdf5
+
+# Model weights
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,1 @@
+"""Score-correction feasibility diagnostics."""

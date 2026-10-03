@@ -1,0 +1,10 @@
+# Portable layout for a user-created analysis workspace.
+workspace_root: "/path/to/your/analysis-workspace"
+checkpoint_cache: "/path/to/your/checkpoint-cache"
+manifest_csv: "configs/checkpoint_manifest.csv"
+dense_eval_root: "results/official_lmeval/dense"
+compressed_eval_root: "results/official_lmeval/compressed"
+summary_table_root: "results/summary_tables"
+analysis_table_root: "results/analysis_tables"
+figure_output_root: "results/figures"
+generated_table_root: "generated_tables"

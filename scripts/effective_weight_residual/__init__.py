@@ -1,0 +1,1 @@
+"""Effective-weight residual diagnostics."""
